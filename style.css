@@ -1,4 +1,4 @@
-.message-retriever-extension {
+#message_retriever_plugin {
     position: fixed;
     left: 20px; /* 根据你的需要调整左侧位置 */
     top: 150px;
@@ -9,25 +9,25 @@
     font-size: 14px;
 }
 
-.message-retriever-extension .keyword-search-area,
-.message-retriever-extension .quick-scroll-area,
-.message-retriever-extension .settings-button-area,
-.message-retriever-extension .advanced-settings-panel,
-.message-retriever-extension .error-message-area {
+#message_retriever_plugin .keyword-search-area,
+#message_retriever_plugin .quick-scroll-area,
+#message_retriever_plugin .settings-button-area,
+#message_retriever_plugin .advanced-settings-panel,
+#message_retriever_plugin .error-message-area {
     margin-bottom: 10px;
 }
 
-.message-retriever-extension .keyword-search-area input[type="text"] {
+#message_retriever_plugin .keyword-search-area input[type="text"] {
     width: calc(100% - 70px); /* 检索框宽度，留出按钮空间 */
     padding: 5px;
     border-radius: 3px;
     border: 1px solid #ccc;
 }
 
-.message-retriever-extension .keyword-search-area input[type="submit"],
-.message-retriever-extension .quick-scroll-area input[type="button"],
-.message-retriever-extension .settings-button-area input[type="button"],
-.message-retriever-extension .advanced-settings-panel input[type="button"] {
+#message_retriever_plugin .keyword-search-area input[type="submit"],
+#message_retriever_plugin .quick-scroll-area input[type="button"],
+#message_retriever_plugin .settings-button-area input[type="button"],
+#message_retriever_plugin .advanced-settings-panel input[type="button"] {
     padding: 5px 10px;
     border-radius: 3px;
     border: none;
@@ -36,23 +36,23 @@
     margin-left: 5px;
 }
 
-.message-retriever-extension .quick-scroll-area input[type="button"] {
+#message_retriever_plugin .quick-scroll-area input[type="button"] {
     width: 30px; /* 箭头按钮宽度 */
     text-align: center;
 }
 
-.message-retriever-extension .advanced-settings-panel {
+#message_retriever_plugin .advanced-settings-panel {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     background-color: #fff;
 }
 
-.message-retriever-extension .settings-group {
+#message_retriever_plugin .settings-group {
     margin-bottom: 5px;
 }
 
-.message-retriever-extension .error-message-area {
+#message_retriever_plugin .error-message-area {
     color: red;
     margin-top: 5px;
     border: 1px solid red;
