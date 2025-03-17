@@ -1,11 +1,11 @@
 {
-    "display_name": "消息检索插件3.0",
+    "display_name": "消息检索插件3.1",
     "loading_order": 10,
     "requires": [],
     "optional": [],
     "js": "index.js",
     "css": "style.css",
-    "author": "您的名字",
+    "author": "AI代码专家",
     "version": "1.0.0",
     "homePage": ""
 }
