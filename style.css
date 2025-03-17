@@ -1,45 +1,62 @@
-#message_retriever_plugin {
+.message-retriever-extension {
     position: fixed;
+    left: 20px; /* 根据你的需要调整左侧位置 */
     top: 150px;
-    left: 10px; /* 调整左侧位置，根据实际界面可能需要调整 */
-    width: 250px; /* 插件UI宽度，您可以根据需要调整 */
+    width: 200px; /* 插件UI宽度，可以调整 */
+    background-color: #f0f0f0; /* 浅灰色背景，可以调整 */
     padding: 10px;
-    background-color: #f0f0f0; /* 浅灰色背景 */
-    border: 1px solid #ccc;
     border-radius: 5px;
-    z-index: 100; /* 确保插件在其他元素之上 */
+    font-size: 14px;
 }
 
-#message_retriever_plugin input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 5px;
+.message-retriever-extension .keyword-search-area,
+.message-retriever-extension .quick-scroll-area,
+.message-retriever-extension .settings-button-area,
+.message-retriever-extension .advanced-settings-panel,
+.message-retriever-extension .error-message-area {
+    margin-bottom: 10px;
+}
+
+.message-retriever-extension .keyword-search-area input[type="text"] {
+    width: calc(100% - 70px); /* 检索框宽度，留出按钮空间 */
+    padding: 5px;
+    border-radius: 3px;
     border: 1px solid #ccc;
-    border-radius: 3px;
 }
 
-#message_retriever_plugin button {
-    padding: 8px 12px;
+.message-retriever-extension .keyword-search-area input[type="submit"],
+.message-retriever-extension .quick-scroll-area input[type="button"],
+.message-retriever-extension .settings-button-area input[type="button"],
+.message-retriever-extension .advanced-settings-panel input[type="button"] {
+    padding: 5px 10px;
+    border-radius: 3px;
     border: none;
-    border-radius: 3px;
-    background-color: #ddd;
+    background-color: #ddd; /* 按钮背景色，可以调整 */
     cursor: pointer;
-    margin-right: 5px;
+    margin-left: 5px;
 }
 
-#message_retriever_plugin button:hover {
-    background-color: #ccc;
-}
-
-#message_retriever_plugin .scroll-buttons button {
-    width: 30px; /* 调整滚动按钮宽度 */
+.message-retriever-extension .quick-scroll-area input[type="button"] {
+    width: 30px; /* 箭头按钮宽度 */
     text-align: center;
 }
 
-#message_retriever_plugin .error-message {
-    color: red;
-    margin-top: 5px;
-    font-size: 0.9em;
+.message-retriever-extension .advanced-settings-panel {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-/* 可以继续添加其他组件的样式 */
+.message-retriever-extension .settings-group {
+    margin-bottom: 5px;
+}
+
+.message-retriever-extension .error-message-area {
+    color: red;
+    margin-top: 5px;
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #ffe0e0;
+}
