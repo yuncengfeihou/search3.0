@@ -1,75 +1,62 @@
-.message-retrieval-extension {
-    /* 插件主容器样式 */
-    margin-bottom: 15px;
+.message-retriever-extension {
+    position: fixed;
+    left: 20px; /* 根据你的需要调整左侧位置 */
+    top: 150px;
+    width: 200px; /* 插件UI宽度，可以调整 */
+    background-color: #f0f0f0; /* 浅灰色背景，可以调整 */
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    font-size: 14px;
 }
 
-.message-retrieval-extension .keyword-search-area,
-.message-retrieval-extension .quick-scroll-area,
-.message-retrieval-extension .advanced-settings-button-area,
-.message-retrieval-extension .advanced-settings-panel,
-.message-retrieval-extension .error-message-area {
-    /* 各区域通用样式 */
-    margin-bottom: 8px;
+.message-retriever-extension .keyword-search-area,
+.message-retriever-extension .quick-scroll-area,
+.message-retriever-extension .settings-button-area,
+.message-retriever-extension .advanced-settings-panel,
+.message-retriever-extension .error-message-area {
+    margin-bottom: 10px;
 }
 
-.message-retrieval-extension .keyword-input {
-    /* 关键词检索框样式 */
-    width: calc(100% - 80px); /* 宽度减去按钮宽度 */
-    padding: 8px;
-    border: 1px solid #ddd;
+.message-retriever-extension .keyword-search-area input[type="text"] {
+    width: calc(100% - 70px); /* 检索框宽度，留出按钮空间 */
+    padding: 5px;
     border-radius: 3px;
+    border: 1px solid #ccc;
 }
 
-.message-retrieval-extension .keyword-button,
-.message-retrieval-extension .scroll-button,
-.message-retrieval-extension .jump-floor-button,
-.message-retrieval-extension .advanced-settings-button,
-.message-retrieval-extension .save-settings-button {
-    /* 按钮通用样式 */
-    padding: 8px 12px;
+.message-retriever-extension .keyword-search-area input[type="submit"],
+.message-retriever-extension .quick-scroll-area input[type="button"],
+.message-retriever-extension .settings-button-area input[type="button"],
+.message-retriever-extension .advanced-settings-panel input[type="button"] {
+    padding: 5px 10px;
+    border-radius: 3px;
     border: none;
-    border-radius: 3px;
-    background-color: #e0e0e0;
+    background-color: #ddd; /* 按钮背景色，可以调整 */
     cursor: pointer;
-    margin-left: 5px; /* 按钮间距 */
+    margin-left: 5px;
 }
 
-.message-retrieval-extension .scroll-button {
-    /* 快速滚动按钮特殊样式 */
-    width: 30px; /* 固定宽度 */
+.message-retriever-extension .quick-scroll-area input[type="button"] {
+    width: 30px; /* 箭头按钮宽度 */
     text-align: center;
 }
 
-.message-retrieval-extension .advanced-settings-panel {
-    /* 高级设置面板样式 */
+.message-retriever-extension .advanced-settings-panel {
+    border: 1px solid #ccc;
     padding: 10px;
-    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.message-retriever-extension .settings-group {
+    margin-bottom: 5px;
+}
+
+.message-retriever-extension .error-message-area {
+    color: red;
+    margin-top: 5px;
+    border: 1px solid red;
+    padding: 5px;
     border-radius: 3px;
-    background-color: #ffffff;
-}
-
-.message-retrieval-extension .settings-group {
-    /* 设置组样式 */
-    margin-bottom: 8px;
-}
-
-.message-retrieval-extension .settings-group label {
-    /* 设置标签样式 */
-        margin-right: 10px;
-}
-
-.message-retrieval-extension .error-message-area {
-    /* 错误提示信息区域样式 */
-    color: red;
-    font-size: 0.9em;
-}
-
-.highlighted-keyword {
-    /* 高亮关键词样式 */
-    color: red;
-    font-weight: bold;
+    background-color: #ffe0e0;
 }
