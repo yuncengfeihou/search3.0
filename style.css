@@ -1,12 +1,13 @@
 #message_retriever_plugin {
     position: fixed;
-    left: 20px; /* 根据你的需要调整左侧位置 */
+    left: 20px;
     top: 150px;
-    width: 200px; /* 插件UI宽度，可以调整 */
-    background-color: #f0f0f0; /* 浅灰色背景，可以调整 */
+    width: 200px;
+    background-color: #f0f0f0;
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
+    z-index: 1000; /* 添加 z-index 属性 */
 }
 
 #message_retriever_plugin .keyword-search-area,
