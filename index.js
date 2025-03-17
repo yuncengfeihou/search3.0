@@ -30,37 +30,44 @@ async function getChatMessages() {
 
 function createUI() {
     const settingsHtml = `
-        <div class="message-retriever-extension">
-            <div class="keyword-search-area">
+        <div id="search-plugin-ui">  <!-- 修改主容器为 id="search-plugin-ui" -->
+            <div class="keyword-search">  <!-- 修改 class="keyword-search-area" 为 class="keyword-search" -->
                 <input type="text" id="keyword-input" class="keyword-input" placeholder="关键词检索" />
-                <input type="submit" id="keyword-search-button" class="menu_button" value="清空" />
+                <button id="keyword-search-button">清空</button>  <!-- 修改 input type="submit" 为 button 标签 -->
             </div>
-            <div class="quick-scroll-area">
-                <input type="button" id="scroll-to-top-button" class="menu_button" value="↑" title="滚动到最早消息" />
-                <input type="button" id="jump-to-floor-button" class="menu_button" value="跳转指定楼层" />
-                <input type="button" id="scroll-to-bottom-button" class="menu_button" value="↓" title="滚动到最新消息" />
+            <div class="scroll-buttons">  <!-- 修改 class="quick-scroll-area" 为 class="scroll-buttons" -->
+                <button id="scroll-to-top-button" title="滚动到最早消息">↑</button>  <!-- 修改 input type="button" 为 button 标签 -->
+                <button id="jump-to-floor-button">跳转指定楼层</button>  <!-- 修改 input type="button" 为 button 标签 -->
+                <button id="scroll-to-bottom-button" title="滚动到最新消息">↓</button>  <!-- 修改 input type="button" 为 button 标签 -->
             </div>
-            <div class="settings-button-area">
-                <input type="button" id="advanced-settings-button" class="menu_button" value="高级检索设置" />
+            <div class="advanced-settings-button-area">  <!-- 保留 class="advanced-settings-button-area" (CSS 中也有这个类名) -->
+                <button id="advanced-settings-btn">高级检索设置</button>  <!-- 修改 input type="button" 和 id 为 CSS 中使用的 #advanced-settings-btn -->
             </div>
-            <div id="advanced-settings-panel" class="advanced-settings-panel" style="display:none;">
+            <div id="advanced-settings-panel" class="advanced-settings-panel hidden">  <!-- 保留 id="advanced-settings-panel" 和 class="advanced-settings-panel"，并添加 class="hidden" 初始化隐藏 -->
+                <label for="realtime-render-radio">检索渲染:</label>
                 <div class="settings-group">
-                    <label for="realtime-render-checkbox">检索渲染:</label>
-                    <input type="checkbox" id="realtime-render-checkbox" />  实时渲染
+                    <input type="radio" id="realtime-render-radio-realtime" name="render_mode" value="realtime" checked /> 实时渲染
                 </div>
                 <div class="settings-group">
-                    <label for="keyword-highlight-checkbox">关键词提亮:</label>
-                    <input type="checkbox" id="keyword-highlight-checkbox" /> 关键词提亮
+                    <input type="radio" id="realtime-render-radio-confirm" name="render_mode" value="confirm" /> 确定渲染
                 </div>
-                <input type="button" id="save-settings-button" class="menu_button" value="保存" />
+
+                <label for="keyword-highlight-checkbox">关键词提亮:</label>
+                <input type="checkbox" id="keyword-highlight-checkbox" checked /> 启用关键词提亮
+
+                <button id="save-settings">保存</button>  <!-- 修改 input type="button" 和 id 为 CSS 中使用的 #save-settings -->
             </div>
-            <div id="error-message-area" class="error-message-area" style="display:none;"></div>
+            <div id="floor-jump-popup" class="hidden">  <!-- 添加 楼层跳转弹窗 HTML 结构，并初始化隐藏 -->
+                <label for="floor-input">跳转楼层:</label>
+                <input type="number" id="floor-input" placeholder="输入楼层号">
+                <div id="floor-info"></div>
+                <button id="jump-button-floor-popup">跳转</button> <!-- 可以添加跳转按钮，如果需要 -->
+            </div>
+            <div id="error-message-area" class="error-message-area hidden"></div>  <!-- 初始化隐藏错误信息区域 -->
         </div>
     `;
 
     $("#character_block").before(settingsHtml); // 将插件UI添加到角色信息块之前
-
-    // 按钮和输入框事件绑定将在后面的步骤中添加
 }
 
 
